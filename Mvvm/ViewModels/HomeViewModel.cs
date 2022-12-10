@@ -35,17 +35,11 @@ namespace LisaTrigger.Mvvm.ViewModels;
 public partial class HomeViewModel : BaseViewModel
 {
     [ObservableProperty] [NotifyCanExecuteChangedFor(nameof(startStreamCommand))]
-   
     [ObservableProperty] private string? baseFilename = null;
-
     [ObservableProperty] private bool isRunning = false;
-
     [ObservableProperty] private Visibility statsVisibility = Visibility.Hidden;
-
     [ObservableProperty] private int itemsSent = 0;
-
     [ObservableProperty] private ProjectInfo projectInfo = ProjectInfo.Instance;
-
     [ObservableProperty] private int seconds = 0;
 
     // ReSharper disable once FieldCanBeMadeReadOnly.Local

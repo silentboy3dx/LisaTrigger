@@ -35,9 +35,7 @@ namespace LisaTrigger.Mvvm.ViewModels;
 public partial class HomeViewModel : BaseViewModel
 {
     [ObservableProperty] [NotifyCanExecuteChangedFor(nameof(startStreamCommand))]
-    // ReSharper disable once FieldCanBeMadeReadOnly.Local
-    private string? selectedFile = "";
-
+   
     [ObservableProperty] private string? baseFilename = null;
 
     [ObservableProperty] private bool isRunning = false;
@@ -49,6 +47,9 @@ public partial class HomeViewModel : BaseViewModel
     [ObservableProperty] private ProjectInfo projectInfo = ProjectInfo.Instance;
 
     [ObservableProperty] private int seconds = 0;
+
+    // ReSharper disable once FieldCanBeMadeReadOnly.Local
+    private string? selectedFile = "";
 
     private readonly Ticker ticker = new Ticker(1000);
 

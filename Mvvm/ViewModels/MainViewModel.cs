@@ -61,6 +61,7 @@ public partial class MainViewModel : BaseViewModel
     {
         Debug.AddMessage(e.Message);
     }
+    
     private void OnAppSettingsChanged(object? sender, SettingsChangedEventArgs e)
     {
         AppSettings = e.Settings;

@@ -18,7 +18,7 @@ Once started the Application will send post texts from your to file to where eve
 The settings for the Application are pretty much self explanatory but lets get over them for the sake of clarity.
 This is how the settings screen look like.
 
-![](settings.png)
+![abc](settings.png)
 
 
 ****Note*** Settings can be changed even while the Application has started positing, but be aware of the fact that changing the settings will reset the countdown timer.*

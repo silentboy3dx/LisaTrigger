@@ -28,11 +28,14 @@ public partial class SettingsModel
         STATE_RUNNING = 1,
     };
 
-    [ObservableProperty] private int interval = 60;
+    [ObservableProperty] 
+    private int interval = 60;
 
-    [ObservableProperty] private bool randomize;
+    [ObservableProperty] 
+    private bool randomize;
 
-    [ObservableProperty] private bool debug;
+    [ObservableProperty]
+    private bool debug;
     
     public States state = States.STATE_OFF;
 }

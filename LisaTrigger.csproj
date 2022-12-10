@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
         <Version>1.0</Version>
-        <AssemblyVersion>1.0</AssemblyVersion>
+        <AssemblyVersion>0.5</AssemblyVersion>
         <ApplicationIcon>Resources\Images\AppIcon.ico</ApplicationIcon>
         <UseWindowsForms>True</UseWindowsForms>
     </PropertyGroup>

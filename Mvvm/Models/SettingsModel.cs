@@ -28,7 +28,7 @@ public partial class SettingsModel
         STATE_RUNNING = 1,
     };
 
-    [ObservableProperty] private int interval = 60;
+    [ObservableProperty] private int interval = 20;
 
     [ObservableProperty] private bool randomize;
 

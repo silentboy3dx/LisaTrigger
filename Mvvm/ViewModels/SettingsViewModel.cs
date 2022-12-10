@@ -22,11 +22,8 @@ namespace LisaTrigger.Mvvm.ViewModels;
 
 public partial class SettingsViewModel : BaseViewModel
 {
-    public SettingsViewModel()
-    {
-        AppSettings.PropertyChanged += AppSettingsChanged;
-    }
-
+    public SettingsViewModel() => AppSettings.PropertyChanged += AppSettingsChanged;
+    
     private void AppSettingsChanged(object sender, PropertyChangedEventArgs e)
     {
         SettingsChanged(new SettingsChangedEventArgs() { Settings = AppSettings });

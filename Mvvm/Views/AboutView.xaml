@@ -4,9 +4,69 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LisaTrigger.Mvvm.Views"
+             d:DataContext="{d:DesignInstance Type=local:AboutView}"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             Background="#1b1b1b"
+             d:DesignHeight="450" d:DesignWidth="300">
     <Grid>
-        
+        <StackPanel>
+            <Ellipse Height="100" Width="100" Margin="0,10,0,0">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Resources/Images/SilentBoy.jpeg" />
+                </Ellipse.Fill>
+            </Ellipse>
+
+
+            <TextBlock
+                Text="{Binding ProjectInfo.ProductName}"
+                HorizontalAlignment="Center"
+                FontSize="22"
+                VerticalAlignment="Center"
+                FontFamily="/Resources/Fonts/#Poppins"
+                Margin="0,10,0,0"
+                Foreground="Gainsboro">
+            </TextBlock>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock
+                    Text="Version: "
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,10,5,0"
+                    FontFamily="/Resources/Fonts/#Poppins"
+                    Foreground="Gainsboro">
+                </TextBlock>
+                <TextBlock
+                    Text="{Binding ProjectInfo.ProductVersion}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,10,0,0"
+                    FontFamily="/Resources/Fonts/#Poppins"
+                    Foreground="Gainsboro">
+                </TextBlock>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock
+                    Text="Written by: "
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,10,5,0"
+                    FontFamily="/Resources/Fonts/#Poppins"
+                    Foreground="Gainsboro">
+                </TextBlock>
+
+                <TextBlock
+                    Text="{Binding ProjectInfo.Author}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,10,0,0"
+                    FontFamily="/Resources/Fonts/#Poppins"
+                    Foreground="Gainsboro">
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

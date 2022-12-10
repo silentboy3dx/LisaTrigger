@@ -1,12 +1,34 @@
-﻿<Window x:Class="LisaTrigger.MainWindow"
+﻿<Window x:Class="LisaTrigger.Mvvm.Windows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LisaTrigger"
+        xmlns:viewModel="clr-namespace:LisaTrigger.Mvvm.ViewModels"
+        xmlns:view="clr-namespace:LisaTrigger.Mvvm.Views"
+        d:DataContext="{d:DesignInstance Type=viewModel:MainViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStyle="SingleBorderWindow"
+        Background="#272537"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Height="350" Width="800">
+    <!-- 272537 -->
+  
     <Grid>
+        <StackPanel Orientation="Horizontal">
+       
+        
+            <TabControl TabStripPlacement="Left" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" Width="400">
+                <TabItem Header="General" IsSelected="True" Style="{StaticResource TabItem}" Content="{Binding Home }" />
+                <TabItem Header="Settings" IsSelected="True" Style="{StaticResource TabItem}" Content="{Binding Settings}" />
+                <TabItem Header="About" IsSelected="True" Style="{StaticResource TabItem}" Content="{Binding About}" />
+            </TabControl>
 
+            <ContentControl 
+                Width="400"
+                Content="{Binding Debug}"/>
+            
+        </StackPanel>
     </Grid>
 </Window>

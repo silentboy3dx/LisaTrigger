@@ -20,7 +20,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 namespace LisaTrigger.Mvvm.Models;
 
 [ObservableObject]
-public partial class Settings
+public partial class SettingsModel
 {
     public enum States
     {
@@ -30,13 +30,9 @@ public partial class Settings
 
     [ObservableProperty] private int interval = 60;
 
-    [ObservableProperty] private bool randomize = false;
+    [ObservableProperty] private bool randomize;
 
-    [ObservableProperty] private bool debug = false;
-
-    public string dataFilename = "";
-
-    [ObservableProperty] private string value = "567";
-
+    [ObservableProperty] private bool debug;
+    
     public States state = States.STATE_OFF;
 }

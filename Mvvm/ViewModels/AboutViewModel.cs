@@ -16,33 +16,13 @@
 */
 
 using CommunityToolkit.Mvvm.ComponentModel;
-using System.Reflection;
+
+using LisaTrigger.Core;
 
 namespace LisaTrigger.Mvvm.ViewModels;
 
 [ObservableObject]
 public partial class AboutViewModel
 {
-    [ObservableProperty]
-    private string text = "LALAL";
-
-    [ObservableProperty]
-    private string? productName = "";
-
-    [ObservableProperty]
-    private string? productVersion = "";
-
-    [ObservableProperty]
-    private string? author = "";
-
-
-    public AboutViewModel()
-    {
-        var assembly = Assembly.GetExecutingAssembly();
-        productName = assembly.GetName().Name;
-        productVersion = assembly.GetName().Version.ToString();
-        author = "SilentBoy";
-    }
-
-
+    [ObservableProperty] private ProjectInfo projectInfo = ProjectInfo.Instance;
 }

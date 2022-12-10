@@ -1,9 +1,30 @@
 ﻿<Application x:Class="LisaTrigger.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModel="clr-namespace:LisaTrigger.Mvvm.ViewModels"
+             xmlns:view="clr-namespace:LisaTrigger.Mvvm.Views"
              xmlns:local="clr-namespace:LisaTrigger"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Mvvm/Windows/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/TabItemTheme.xaml" />
+                <ResourceDictionary Source="Theme/StartButtonTheme.xaml" />
+                <ResourceDictionary Source="Theme/SelectFileButtonTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+            <view:SettingsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:AboutViewModel}">
+                <view:AboutView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:DebugViewModel}">
+                <view:DebugView/>
+            </DataTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

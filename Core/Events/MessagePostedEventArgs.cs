@@ -20,7 +20,7 @@ using System.IO.Packaging;
 
 namespace LisaTrigger.Core.Events;
 
-public class MessagePosterEventArgs
+public class MessagePostedEventArgs
 {
     public string Message = "";
 }

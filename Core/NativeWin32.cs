@@ -15,11 +15,10 @@
  * IN THE SOFTWARE.
 */
 
-using System;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace Keymaster.Core
+namespace LisaTrigger.Core
 {
     public class NativeWin32
     {

@@ -4,9 +4,35 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LisaTrigger.Mvvm.Views"
+             xmlns:viewModel="clr-namespace:LisaTrigger.Mvvm.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewModel:DebugViewModel}"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+
+             d:DesignHeight="450" d:DesignWidth="300">
+
     <Grid>
-        
+        <ListView x:Name="listBox" BorderBrush="Transparent" Background="Transparent" Width="400" 
+                 ItemsSource="{Binding Messages}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="3">
+                        <DockPanel>
+                            <TextBlock FontFamily="/Resources/Fonts/#Poppins" Foreground="Gainsboro" Text="When:"
+                                       DockPanel.Dock="Left" Margin="5,0,10,0" />
+                            <TextBlock Text="" />
+                            <TextBlock FontFamily="/Resources/Fonts/#Poppins" Foreground="Gainsboro"
+                                       Text="{Binding TimeString}" />
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock FontFamily="/Resources/Fonts/#Poppins" Foreground="Gainsboro" Text="Message:"
+                                       DockPanel.Dock="Left"
+                                       Margin="5,0,5,0" />
+                            <TextBlock FontFamily="/Resources/Fonts/#Poppins" Foreground="Gainsboro"
+                                       Text="{Binding Message}" />
+                        </DockPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListView>
     </Grid>
 </UserControl>

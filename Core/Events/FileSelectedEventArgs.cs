@@ -5,5 +5,5 @@ namespace LisaTrigger.Core.Events;
 
 public class FileSelectedEventArgs
 {
-    public string File { get; set; }
+    public string? File { get; set; }
 }

@@ -48,6 +48,7 @@ public partial class BaseViewModel
         MessageSentEventHandler?.Invoke(this, e);
     }
 
+    // ReSharper disable once UnusedMember.Global
     public void ReloadSettings(SettingsModel Settings)
     {
         AppSettings = Settings;

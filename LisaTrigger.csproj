@@ -51,6 +51,9 @@
       <None Remove="Resources\Images\icon.ico" />
       <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
       <Resource Include="Resources\Fonts\Poppins-Regular.ttf" />
+      <None Update="Example.csv">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
     <ItemGroup>

@@ -1,6 +1,6 @@
 # LisaTrigger
 
-This project is called LisaTrigger. This tool was made for DJLisa to send banners and ascii art to 3DXChat on a continuing basis.
+This project is called LisaTrigger. This tool was made for DJLisa to send banners and ascii art to 3DXChat on a continuing basis. For me this was just a fun project to give back to my favorite DJ and her awesome TUNES!!
 <br/>
 
 ![](screenshot.png)
@@ -8,7 +8,7 @@ This project is called LisaTrigger. This tool was made for DJLisa to send banner
 
 ## How to use the Application
 
-Use the "Select file" button to select a csv file (<a id="raw-url" href="https://raw.githubusercontent.com/silentboy3dx/LisaTrigger/master/Example.csv?token=GHSAT0AAAAAAB3NYFPE4ODI3AFBRD5SV7PKY4U4E3A">Download here</a>)
+Use the "Select file" button to select a csv file (<a id="raw-url" href="https://raw.githubusercontent.com/silentboy3dx/LisaTrigger/master/Example.csv?token=GHSAT0AAAAAAB3NYFPE4ODI3AFBRD5SV7PKY4U4E3A">You can download it here</a> but Its also included in the release zip file)
 containing text to post to 3DXChat. After selecting your file press the "Start" button.
 Once started the Application will send post texts from your to file to where ever your cursor is.
 

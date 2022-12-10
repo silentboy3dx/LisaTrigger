@@ -8,7 +8,7 @@ This project is called LisaTrigger. This tool was made for DJLisa to send banner
 
 ## How to use the Application
 
-Use the "Select file" button to select a csv file ([Download here](Example.csv))
+Use the "Select file" button to select a csv file (<a id="raw-url" href="Example.csv">Download here</a>)
 containing text to post to 3DXChat. After selecting your file press the "Start" button.
 Once started the Application will send post texts from your to file to where ever your cursor is.
 

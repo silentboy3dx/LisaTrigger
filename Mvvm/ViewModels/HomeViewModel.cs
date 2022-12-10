@@ -87,8 +87,7 @@ public partial class HomeViewModel : BaseViewModel
     {
         StatsVisibility = (value) ? Visibility.Visible : Visibility.Hidden;
     }
-
- 
+    
     [RelayCommand]
     private void selectFile()
     {
@@ -101,8 +100,7 @@ public partial class HomeViewModel : BaseViewModel
 
         FileSelected(new FileSelectedEventArgs() { File = selectedFile });
     }
-
-
+    
     private void SendText()
     {
         if (!isRunning) return;
@@ -155,8 +153,7 @@ public partial class HomeViewModel : BaseViewModel
     }
     
     private bool CanStream() => (selectedFile.Length > 0);
-
-
+    
     [RelayCommand(CanExecute = "CanStream")]
     private void startStream()
     {

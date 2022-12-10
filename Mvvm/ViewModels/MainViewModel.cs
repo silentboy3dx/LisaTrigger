@@ -42,8 +42,7 @@ public partial class MainViewModel : BaseViewModel
         Debug.AddMessage("Application initialized");
         HandleDebug();
     }
-
-
+    
     private void HandleDebug()
     {
         if (AppSettings.Debug)
@@ -68,8 +67,7 @@ public partial class MainViewModel : BaseViewModel
         Home.ReloadSettings(AppSettings);
         Home.resetTimer();
         Settings.ReloadSettings(AppSettings);
-
-
+        
         DataStore<SettingsModel>.Instance.setData(AppSettings);
         DataStore<SettingsModel>.Instance.write();
 

@@ -8,7 +8,7 @@ This project is called LisaTrigger. This tool was made for DJLisa to send banner
 
 ## How to use the Application
 
-Use the "Select file" button to select a csv file (<a id="raw-url" href="Example.csv">Download here</a>)
+Use the "Select file" button to select a csv file (<a id="raw-url" href="raw/master/Example.csv">Download here</a>)
 containing text to post to 3DXChat. After selecting your file press the "Start" button.
 Once started the Application will send post texts from your to file to where ever your cursor is.
 
@@ -18,7 +18,7 @@ Once started the Application will send post texts from your to file to where eve
 The settings for the Application are pretty much self explanatory but lets get over them for the sake of clarity.
 This is how the settings screen look like.
 
-![abc](settings.png)
+![](settings.png)
 
 
 ****Note*** Settings can be changed even while the Application has started positing, but be aware of the fact that changing the settings will reset the countdown timer.*

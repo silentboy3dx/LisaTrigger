@@ -10,6 +10,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/TabItemTheme.xaml" />
                 <ResourceDictionary Source="Theme/StartButtonTheme.xaml" />
+                <ResourceDictionary Source="Theme/SaveButtonTheme.xaml" />
                 <ResourceDictionary Source="Theme/SelectFileButtonTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
             

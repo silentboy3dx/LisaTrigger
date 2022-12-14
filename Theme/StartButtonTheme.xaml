@@ -21,8 +21,8 @@
                                   HorizontalAlignment="Left" Margin="17,0,0,0"
                                   Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z " />
 
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-38,0,0,5">
-                                <TextBlock Name="StatusText" FontFamily="/Resources/Fonts/#Poppins" Text="Start"
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-28,0,0,5">
+                                <TextBlock Name="StatusText" FontFamily="/Resources/Fonts/#Poppins" Text="Start" Foreground="Gainsboro"
                                            FontSize="20" />
                                 <TextBlock Name="DurationText" FontFamily="/Resources/Fonts/#Poppins" FontSize="12"
                                            Foreground="Gainsboro"

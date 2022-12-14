@@ -7,12 +7,12 @@
              xmlns:viewModel="clr-namespace:LisaTrigger.Mvvm.ViewModels"
              d:DataContext="{d:DesignInstance Type=viewModel:DebugViewModel}"
              mc:Ignorable="d"
-
-             d:DesignHeight="450" d:DesignWidth="300">
+             BorderThickness="0"
+             d:DesignHeight="334" d:DesignWidth="400">
 
     <Grid>
-        <ListView x:Name="listBox" BorderBrush="Transparent" Background="Transparent" Width="400" 
-                 ItemsSource="{Binding Messages}">
+        <ListView x:Name="listBox" BorderThickness="0" BorderBrush="Transparent" Background="Transparent"  Width="385" 
+                 ItemsSource="{Binding Messages}" Height="259" HorizontalAlignment="Left" VerticalAlignment="Top">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="3">
@@ -34,5 +34,6 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListView>
+        <Button Width="109" Style="{StaticResource SaveButton}" Command="{Binding saveCommand}" Content="Button" HorizontalAlignment="Right" Margin="0,264,23,0" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

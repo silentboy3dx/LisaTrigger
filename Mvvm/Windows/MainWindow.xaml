@@ -27,7 +27,7 @@
 
             <ContentControl 
                 Width="400"
-                Content="{Binding Debug}"/>
+                Content="{Binding Debug}" BorderThickness="0" Height="334" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             
         </StackPanel>
     </Grid>

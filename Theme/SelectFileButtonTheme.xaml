@@ -17,8 +17,8 @@
                                     <RotateTransform Angle="180"></RotateTransform>
                                 </Path.LayoutTransform>
                             </Path>
-                                
-                            <Label FontFamily="/Resources/Fonts/#Poppins" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-5,0,0,0" />                                
+                            <Label Name="StatusText"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-5,0,0,0" FontFamily="/Resources/Fonts/#Poppins" Content="{TemplateBinding Content}"
+                                           FontSize="20" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>

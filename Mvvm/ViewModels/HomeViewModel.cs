@@ -86,7 +86,12 @@ public partial class HomeViewModel : BaseViewModel
     [RelayCommand]
     private void selectFile()
     {
-        var open = new Microsoft.Win32.OpenFileDialog();
+        var open = new Microsoft.Win32.OpenFileDialog
+        {
+            Filter = "Comma separated file (*.csv)|*.csv",
+            DefaultExt = "csv",
+            AddExtension = true
+        };
 
         if (open.ShowDialog() != true) return;
         

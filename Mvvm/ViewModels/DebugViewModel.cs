@@ -17,7 +17,10 @@
 
 using System;
 using System.Collections.ObjectModel;
+using System.IO;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using LisaTrigger.Core;
 using LisaTrigger.Mvvm.Models;
 
 namespace LisaTrigger.Mvvm.ViewModels;
@@ -25,10 +28,34 @@ namespace LisaTrigger.Mvvm.ViewModels;
 public partial class DebugViewModel : BaseViewModel
 {
     [ObservableProperty] 
+    [NotifyCanExecuteChangedFor(nameof(saveCommand))]
     private ObservableCollection<MessageModel> messages = new ObservableCollection<MessageModel>();
 
     public void AddMessage(string message)
     {
         messages.Add(new MessageModel() { TimeString = DateTime.Now.ToString(), Message = message});
+    }
+    
+    private bool CanSave() => (messages.Count > 0);
+    
+    [RelayCommand(CanExecute = "CanSave")]
+    private void save()
+    {
+        var save = new Microsoft.Win32.SaveFileDialog
+        {
+            Filter = "Text file (*.txt)|*.txt",
+            DefaultExt = "txt",
+            FileName = ProjectInfo.Instance.ProductName + "_log",
+            AddExtension = true
+        };
+
+        if (save.ShowDialog() != true) return;
+
+        using var writer = new StreamWriter(save.FileName);
+        foreach (var line in messages)
+        {
+            var item = (line as MessageModel);
+            writer.WriteLine(item.TimeString + " " + item.Message);
+        }
     }
 }

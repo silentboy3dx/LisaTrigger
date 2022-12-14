@@ -42,7 +42,7 @@ public partial class MainViewModel : BaseViewModel
         Debug.AddMessage("Application initialized");
         HandleDebug();
     }
-    
+
     private void HandleDebug()
     {
         if (AppSettings.Debug)
@@ -61,14 +61,14 @@ public partial class MainViewModel : BaseViewModel
     {
         Debug.AddMessage(e.Message);
     }
-    
+
     private void OnAppSettingsChanged(object? sender, SettingsChangedEventArgs e)
     {
         AppSettings = e.Settings;
         Home.ReloadSettings(AppSettings);
         Home.resetTimer();
         Settings.ReloadSettings(AppSettings);
-        
+
         DataStore<SettingsModel>.Instance.setData(AppSettings);
         DataStore<SettingsModel>.Instance.write();
 
